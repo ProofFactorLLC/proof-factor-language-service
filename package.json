@@ -1,6 +1,6 @@
 {
   "name": "proof-factor-language-service",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Proof factor translations",
   "main": "./dist/proof-factor-language-service.js",
   "types": "./dist/index.d.ts",
