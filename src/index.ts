@@ -222,6 +222,30 @@ export class ProofFactorLanguageService {
     }
   }
 
+  public static loadI18n(lang: string): Promise<any> {
+    switch (lang) {
+      case "de":
+        return import(/* webpackChunkName: "i18n-de" */ "./i18n/de");
+      case "es":
+        return import(/* webpackChunkName: "i18n-fr" */ "./i18n/es");
+      case "pt_BR":
+        return import(/* webpackChunkName: "i18n-fr" */ "./i18n/pt_BR");
+      case "fr":
+        return import(/* webpackChunkName: "i18n-fr" */ "./i18n/fr");
+      case "ar":
+        return import(/* webpackChunkName: "i18n-ar" */ "./i18n/ar");
+      case "ru":
+        return import(/* webpackChunkName: "i18n-ru" */ "./i18n/ru");
+      case "uk":
+        return import(/* webpackChunkName: "i18n-uk" */ "./i18n/uk");
+      case "it":
+        return import(/* webpackChunkName: "i18n-uk" */ "./i18n/it");
+      case "en":
+      default:
+        return import(/* webpackChunkName: "i18n-en" */ "./i18n/en");
+    }
+  }
+  
   constructor() {}
 
   public registerLocale(locale: string) {
